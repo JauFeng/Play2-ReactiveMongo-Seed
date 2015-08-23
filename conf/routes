@@ -1,0 +1,32 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET        /                                         @controllers.ApplicationUsingJsObject.index
+
+GET        /json/jsobj/save/:name/:age               @controllers.ApplicationUsingJsObject.create(name: String, age: Int)
+GET        /json/jsobj/get/:name                     @controllers.ApplicationUsingJsObject.findByName(name: String)
+
+GET        /json/caseclass/save/:name/:age           @controllers.ApplicationUsingCaseClass.create(name: String, age: Int)
+GET        /json/caseclass/get/:name                 @controllers.ApplicationUsingCaseClass.findByName(name: String)
+GET        /json/list                                @controllers.ApplicationUsingCaseClass.findAll
+
+GET        /bson/bsondoc/save/:name/:age             @controllers.ApplicationUsingBSON.insert(name: String, age: Int)
+GET        /bson/bsondoc/save/multidoc               @controllers.ApplicationUsingBSON.multiInsert
+GET        /bson/bsondoc/update                      @controllers.ApplicationUsingBSON.update
+GET        /bson/bsondoc/delete                      @controllers.ApplicationUsingBSON.remove
+GET        /bson/bsondoc/findandupdate/:name         @controllers.ApplicationUsingBSON.findAndUpdate(name: String)
+GET        /bson/bsondoc/findanddelete/:name         @controllers.ApplicationUsingBSON.findAndDelete(name: String)
+GET        /bson/bsondoc/list                        @controllers.ApplicationUsingBSON.list
+GET        /bson/bsondoc/getbyid/:id                 @controllers.ApplicationUsingBSON.findById(id: String)
+GET        /bson/bsondoc/getbyname/:name             @controllers.ApplicationUsingBSON.findByName(name: String)
+GET        /bson/bsondoc/getandsort/:name            @controllers.ApplicationUsingBSON.findByNameAndSort(name: String)
+GET        /bson/bsondoc/querybycriteria/:age        @controllers.ApplicationUsingBSON.queryByCriteria(age: Int)
+GET        /bson/caseclass/list                      @controllers.ApplicationUsingBSON.listWithCaseClass
+GET        /bson/caseclass/get/:name                 @controllers.ApplicationUsingBSON.findByNameWithCaseClass(name: String)
+
+GET        /stream/iteratee                          @controllers.ApplicationUsingBSON.streamWithIteratee
+
+# Map static resources from the /public folder to the /assets URL path
+GET        /assets/*file                             @controllers.Assets.versioned(path="/public", file: Asset)

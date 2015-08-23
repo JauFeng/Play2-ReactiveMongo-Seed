@@ -1,0 +1,16 @@
+New log file opened at Thu Aug 20 11:57:50 CST 2015 by 7825@sean-ThinkPad-T420
+Taking next connection to: 36137
+New client attempting to connect on port: 60614-36137
+  Address = /127.0.1.1:36137
+This client on port 60614 has uuid 5981b249-ab9d-49db-adf6-e38d95f685fb configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-5981b249-ab9d-49db-adf6-e38d95f685fb
+Taking next connection to: 36137
+Checking to see if clients are empty...
+We have 1 non-daemon clients, continuing serving connections.
+Taking next connection to: 36137
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 7825@sean-ThinkPad-T420 logs at Thu Aug 20 12:03:51 CST 2015, goodbye.
